@@ -3,7 +3,7 @@
     <head>
         <title>Learn CSS part 4</title>
         <style>
-            a {
+            a.one {
                 color: pink;
                 text-decoration: none;
                 border: 1px solid deeppink;
@@ -13,28 +13,85 @@
                 border-radius: 10px;
             }
             
-            a:link {
+            a.one:link {
                 color: white;
             }
 
-            a:visited {
+            a.one:visited {
                 color: white;
             }
 
-            a:hover {
+            a.one:hover {
                 color: white;
                 background-color: deeppink;
             }
 
-            a:active {
+            a.one:active {
                 color: deeppink;
             }
+
+            a.two {
+                color: pink;
+                text-decoration: none;
+                border: 1px solid darkgreen;
+                padding: 10px 20px;
+                background-color: green;
+                font-family: Arial, Helvetica, sans-serif;
+                border-radius: 10px;
+            }
+            
+            a.two:link {
+                color: white;
+            }
+
+            a.two:visited {
+                color: white;
+            }
+
+            a.two:hover {
+                color: white;
+                background-color: darkgreen;
+            }
+
+            a.two:active {
+                color: darkgreen;
+            }
+
+            a.three {
+                color: pink;
+                text-decoration: none;
+                border: 1px solid darkblue;
+                padding: 10px 20px;
+                background-color: blue;
+                font-family: Arial, Helvetica, sans-serif;
+                border-radius: 10px;
+            }
+            
+            a.three:link {
+                color: white;
+            }
+
+            a.three:visited {
+                color: white;
+            }
+
+            a.three:hover {
+                color: white;
+                background-color: darkblue;
+            }
+
+            a.three:active {
+                color: darkblue;
+            }
+            
 
         </style>
     </head>
     <body>
         <h1>Learn CSS part 4</h1>
 
-        <a href="https://google.com">Link to Google</a>
+        <a class="one" href="https://google.com">Link to Google</a>
+        <a class="two" href="https://fti.unai.edu">Link to FTI UNAI</a>
+        <a class="three" href="https://unai.edu">Link to UNAI Website</a>
     </body>
 </html>
