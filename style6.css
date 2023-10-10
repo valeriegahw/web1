@@ -14,5 +14,6 @@
     background-color: lightpink;
 }
 #footer {
+    clear: both;
     background-color: lightgoldenrodyellow;
 }
