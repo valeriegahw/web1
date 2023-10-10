@@ -31,3 +31,11 @@ li:hover {
     font-weight: hold;
     background-color: brown;
 }
+h2 {
+    margin-bottom: 10px;
+}
+img {
+    float: right;
+    width: 200px;
+    margin: 10px;
+}
