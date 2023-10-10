@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#header {
+    text-align: center;
+    background-color: lightblue;
+}
+#sidebar {
+    width: 25%;
+    float: left;
+    background-color: lightcoral;
+}
+#main {
+    width: 75%;
+    float: right;
+    background-color: lightpink;
+}
+#footer {
+    clear: both;
+    padding: 20px;
+    text-align: center;
+    background-color: lightgoldenrodyellow;
+}
+li {
+    padding: 10px;
+}
+li:hover {
+    font-weight: hold;
+    background-color: brown;
+}
+h2 {
+    margin-bottom: 10px;
+}
+img {
+    float: right;
+    width: 200px;
+    margin: 10px;
+}
