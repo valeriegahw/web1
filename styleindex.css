@@ -5,10 +5,19 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    width: 800px;
+    margin: 0 auto;
+}
+
 header {
     padding: 20px;
-    text-align: center;
     background-color: #cdcdcd;
+    display: flex;
+}
+
+h1 {
+    margin-left: 30px;
 }
 
 nav {
@@ -22,4 +31,45 @@ nav ul {
     justify-content: space-around;
     list-style-type: none;
     text-transform: uppercase;
+}
+
+nav li:hover {
+    color: yellow;
+    font-weight: bolder;
+}
+
+main {
+    margin-top: 20px;
+}
+
+main img {
+    width: 100%;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#container div {
+    width: 30%;
+    border: 1px solid #dedede;
+    padding: 10px;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #cdcdcd ;
+    padding: 20px;
+    text-align: center;
+}
+
+main div img {
+    width: 220px;
+    margin: 10px 0;
+}
+
+h2 {
+    margin: 10px 0;
+    text-align: center;
 }
