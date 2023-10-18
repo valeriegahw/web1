@@ -38,10 +38,6 @@ nav li:hover {
     font-weight: bolder;
 }
 
-main {
-    margin-top: 20px;
-}
-
 main img {
     width: 100%;
 }
@@ -61,7 +57,15 @@ footer {
     margin-top: 20px;
     background-color: #cdcdcd ;
     padding: 20px;
-    text-align: center;
+}
+
+#footercontainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#footercontainer div {
+    width: 30%;
 }
 
 main div img {
@@ -72,4 +76,15 @@ main div img {
 h2 {
     margin: 10px 0;
     text-align: center;
+}
+
+#copyright {
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #343434;
+}
+
+footer ul li {
+    list-style-type: none;
+    padding: 5px 0;
 }
