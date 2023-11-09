@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 12</title>
+</head>
+<body>
+    <h1>A very simple JS Calculator</h1>
+    <label for="">Input:</label>
+    <input type="number" id="data1">
+
+    <select name="" id="operator">
+        <option value="tambah">+</option>
+        <option value="kurang">-</option>
+        <option value="kali">*</option>
+        <option value="bagi">/</option>
+    </select>
+
+    <input type="number" id="data2">
+    <input type="submit" value="Calculate" onclick="testClick()"/>
+
+    <br>
+    <br>
+    <label>Result:</label>
+    <input type="number" id="result" readonly>
+
+    <script>
+   function testClick(){
+    console.log("Test klik button");
+
+    var getdata1 = document.getElementById("data1").value;
+    var getdata2 = document.getElementById("data2").value;
+
+    var getOperator = document.getElementById("operator").value;
+
+    console.log("Get Data 1", getdata1);
+    console.log("Get Data 2", getdata2);
+    console.log("Get Value operator", getOperator);
+
+    var hitung;
+
+    switch(getOperator){
+        case "tambah":
+            getdata1 = Number(getdata1);
+            getdata2 = Number(getdata2);
+            hitung = getdata1 + getdata2;
+            break;
+        case "kurang":
+            getdata1 = Number(getdata1);
+            getdata2 = Number(getdata2);
+            hitung = getdata1 - getdata2;
+            break;
+        case "kali":
+            getdata1 = Number(getdata1);
+            getdata2 = Number(getdata2);
+            hitung = getdata1 * getdata2;
+            break;
+        case "bagi":
+            getdata1 = Number(getdata1);
+            getdata2 = Number(getdata2);
+            hitung = getdata1 / getdata2; 
+            break;   
+    }
+
+    document.getElementById("result").value = hitung;
+   }
+   </script>
+
+</body>
+</html>
