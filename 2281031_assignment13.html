@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 13</title>
+</head>
+
+    <body 
+    onload="pageLoaded()" 
+    onkeydown="keyDownEvent(event)" 
+    onkeyup="keyUpEvent(event)" 
+    onmouseup="mouseClickEvent(event)"
+    ondragstart="dragStartEvent(event)" 
+    ondragover="dragOverEvent(event)"
+    ondrop="dropEvent(event)">
+
+  <h1>JS Event</h1>
+
+    <div id="hover-div" 
+    onmouseover="changeColor()" 
+    onmouseout="restoreColor()" 
+    draggable="true">
+    Hover me, click me, and try to drag me!
+    </div>
+
+    <script>
+    function changeColor() {
+        document.getElementById('hover-div').style.backgroundColor = 'lightgreen';
+    }
+
+    function restoreColor() {
+        document.getElementById('hover-div').style.backgroundColor = '';
+    }
+
+    function keyDownEvent(event) {
+        alert('Key down: ' + event.key);
+    }
+
+    function keyUpEvent(event) {
+        alert('Key up: ' + event.key);
+    }
+
+    function pageLoaded() {
+        alert('Page loaded!');
+    }
+
+    function mouseClickEvent(event) {
+        alert('Mouse clicked at coordinates: (' + event.clientX + ', ' + event.clientY + ')');
+    }
+
+    function dragStartEvent(event) {
+        event.dataTransfer.setData('text', event.target.id);
+    }
+
+    function dragOverEvent(event) {
+        event.preventDefault();
+    }
+
+    function dropEvent(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData('text');
+        alert('Element with ID ' + data + ' dropped at coordinates: (' + event.clientX + ', ' + event.clientY + ')');
+    }
+    </script>
+    
+</body>
+</html>
