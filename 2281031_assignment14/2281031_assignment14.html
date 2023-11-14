@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 14</title>
+    <link rel="stylesheet" href="contact.css">
+
+    <script>
+        function validateForm() {
+          let fname = document.forms["myForm"]["fname"].value;
+          let lname = document.forms["myForm"]["lname"].value;
+          let email = document.forms["myForm"]["email"].value;
+          let username = document.forms["myForm"]["username"].value;
+          let password = document.forms["myForm"]["password"].value;
+          let gender = document.forms["myForm"]["gender"].value;
+          let religion = document.forms["myForm"]["religion"].value;
+          let address = document.forms["myForm"]["address"].value;
+          let hobbies = document.querySelectorAll('input[name="hobbies"]:checked');
+
+          if (fname === "") {
+            alert("Full name is not filled");
+            return false;
+          }
+
+          if (lname === "") {
+            alert("Last name is not filled");
+            return false;
+          }
+
+          if (email === "") {
+            alert("E-mail is not filled");
+            return false;
+          }
+
+          if (username === "") {
+            alert("Username is not filled");
+            return false;
+          }
+
+          if (password === "") {
+            alert("Password is not filled");
+            return false;
+          }
+
+          if (gender === "") {
+            alert("Gender is not filled");
+            return false;
+          }
+
+          if (religion === "") {
+            alert("Religion is not filled");
+            return false;
+          }
+
+          if (address === "") {
+            alert("Address is not filled");
+            return false;
+          }
+
+          if (hobbies.length === 0) {
+            alert("Select at least one Hobby");
+            return false;
+          }
+          
+        }
+    </script>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        <fieldset>
+            <legend>Personal Data: </legend>
+
+            <!-- Input type text -->
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br><br><br>
+
+            <!-- Input type email -->
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email"><br><br><br>
+
+            <!-- Input type text -->
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br><br><br>
+
+            <!--Input type password-->
+            <label for="password">Password: </label><br>
+            <input type="password" id="password" name="password"><br><br><br>
+
+            <!-- Input type radio -->
+            <p>Choose your gender: </p>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br><br><br>
+
+            <!-- Select element -->
+            <label for="religion">Religion: </label><br>
+            <select id="religion" name="religion">
+                <option value="" disabled selected>Choose your Religion</option>
+                <option value="Christian">Christian</option>
+                <option value="Moslem">Moslem</option>
+                <option value="Budhist">Budhist</option>
+                <option value="Hindu">Hindu</option>
+            </select><br><br><br>
+
+            <!-- Textarea element -->
+            <label for="address">Write your address below: </label><br>
+            <textarea id="address" name="address" rows="10" cols="30"></textarea><br><br>
+
+            <!-- Input type checkbox -->
+            <p>Choose your hobbies: </p>
+            <input type="checkbox" id="hobby1" name="hobbies" value="Badminton">
+            <label for="hobby1">Badminton</label><br>
+            <input type="checkbox" id="hobby2" name="hobbies" value="Futsal">
+            <label for="hobby2">Futsal</label><br>
+            <input type="checkbox" id="hobby3" name="hobbies" value="Football">
+            <label for="hobby3">Football</label><br>
+            <input type="checkbox" id="hobby4" name="hobbies" value="Basketball">
+            <label for="hobby4">Basketball</label><br>
+
+                <!-- Input type submit & image -->
+                <input type="image" src="save.png" alt="Save" width="150" height="150">
+        </fieldset>
+    </form>    
+
+    <div class="contact">
+        <h3>Take a look here too!</h3>
+        <a href="index.html">Home</a>
+        <a href="biodata.html" target="_blank">Biodata</a>
+        <a href="free.html" target="_blank">Free Page</a>
+    </div>
+
+    <div class="contact">
+        <h3>Universitas Advent Indonesia | Fakultas Teknologi Informasi</h3>
+        <a href="https://unai.edu/">https://unai.edu/</a>
+        <a href="https://fti.unai.edu/" target="_blank">https://fti.unai.edu/</a><br><br>
+        <p>FTI, more than faculty!</p>
+    </div>
+
+</body>
+</html>
